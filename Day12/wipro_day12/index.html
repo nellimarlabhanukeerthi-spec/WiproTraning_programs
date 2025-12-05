@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Management - Spring Flowers School</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header Section -->
+  <header>
+    <div class="logo">Spring Flowers School</div>
+    <nav class="menu">
+      <button onclick="showWelcome()">Home</button>
+      <button onclick="showProfile()">Student Profile</button>
+      <button>About</button>
+      <button>Contact</button>
+    </nav>
+  </header>
+
+  <!-- Main Content Section -->
+  <main>
+    <!-- Welcome Section -->
+    <section id="welcomeSection" class="visible">
+      <h1>Welcome to Spring Flowers School</h1>
+      <p>We help our students grow through excellence, discipline, and creativity.</p>
+    </section>
+
+    <!-- Student Profile Section -->
+    <section id="profileSection" class="hidden">
+      <div class="student-card">
+        <div class="student-image">
+          <img src="bhanu.jpg" alt="Student Image">
+        </div>
+        <div class="student-info">
+          <h2>Student Information</h2>
+          <p><strong>Name:</strong> Bhanu Keerthi</p>
+          <p><strong>Class:</strong> 10th Grade</p>
+          <p><strong>Roll No:</strong> 25</p>
+          <p><strong>Subjects:</strong> Math, Science, English</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    // JavaScript to toggle between sections
+    function showWelcome() {
+      document.getElementById("welcomeSection").classList.add("visible");
+      document.getElementById("welcomeSection").classList.remove("hidden");
+      document.getElementById("profileSection").classList.add("hidden");
+    }
+
+    function showProfile() {
+      document.getElementById("profileSection").classList.add("visible");
+      document.getElementById("profileSection").classList.remove("hidden");
+      document.getElementById("welcomeSection").classList.add("hidden");
+    }
+  </script>
+</body>
+</html>
